@@ -1,0 +1,312 @@
+{
+  //"suggest.numberSelect": true,
+  "clangd.path": "C:\\Users\\admin\\AppData\\Local\\nvim-data\\mason\\packages\\clangd\\clangd_20.1.8\\bin\\clangd.exe",
+  "clangd.arguments": ["--background-index", "--completion-style=detailed", "--all-scopes-completion=true"],
+  "clangd.enableSemanticHighlights": false,
+  "semanticTokens.enable": true,
+  "semanticTokens.highlightPriority": 10,
+  "highlight.colors.enable": true,
+  "highlight.document.enable": true,
+  "inlayHint.enable": false,
+  "sumneko-lua.enable": true,
+  "sumneko-lua.serverDir": "C:\\Users\\admin\\scoop\\apps\\lua-language-server\\current\\",
+  "sumneko-lua.enableNvimLuaDev": true,
+  "sumneko-lua.locale": "zh-cn",
+  "Lua.completion.enable": true,
+  "Lua.diagnostics.globals": ["vim", "packer_plugins", "use"],
+  "Lua.workspace.userThirdParty": [
+    "${workspaceFolder}/lua",
+    "${workspaceFolder}/?.lua",
+    "${workspaceFolder}/?/init.lua", 
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime",
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua",
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua\\vim",
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua\\vim\\lsp",
+  ],
+  "Lua.workspace.library": [
+    "${workspaceFolder}/lua",
+    "${workspaceFolder}/?.lua",
+    "${workspaceFolder}/?/init.lua", 
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime",
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua",
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua\\vim",
+    "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua\\vim\\lsp",
+  ],
+  //"Lua.semantic.enable": true,
+  //"Lua.completion.enable": true,
+  //"Lua.diagnostics.globals": ["vim", "packer_plugins", "use"],
+  //"Lua.workspace.library": [
+  //  "${workspaceFolder}/lua",
+  //  "${workspaceFolder}/?.lua",
+  //  "${workspaceFolder}/?/init.lua", 
+  //  "C:\\Program Files\\Neovim\\share\\nvim\\runtime",
+  //  "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua",
+  //  "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua\\vim",
+  //  "C:\\Program Files\\Neovim\\share\\nvim\\runtime\\lua\\vim\\lsp",
+  //],
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false, 
+  "suggest.acceptSuggestionOnCommitCharacter": false,
+  "snippets.ultisnips.enable":true,
+  "snippets.ultisnips.directories": [
+    "C:\\Users\\admin\\AppData\\Local\\nvim\\UltiSnips"
+  ],
+  //    "snippets.ultisnips.directories": [
+  //        "~/.config/nvim/UltiSnips"
+  //    ],
+  "snippets.extends":{
+    "cpp": ["c"],
+    "latex": ["tex"]
+  },
+  "coc.preferences.currentFunctionSymbolAutoUpdate":true,
+  //    "ccls.workspaceSymbol.maxNum":10000000,
+  "languageserver": {
+    //        "ccls": {
+    //            "command": "ccls",
+    //            "filetypes": ["c", "cpp", "objc", "objcpp"],
+    //            "rootPatterns": [ "compile_commands.json", ".ccls",".vim/", ".git/"],
+    //            "initializationOptions": {
+    //                "cache": {
+    //                    "directory": "/tmp/ccls"
+    //                }
+    //            }
+    //        },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
+    "latex": {
+      "command": "/usr/bin/texlab",
+      // not start server at home directory, since it won't work.
+      "ignoredRootPaths": ["~"],
+      "filetypes": ["tex", "bib", "plaintex", "context"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
+    "lua": {
+      "command": "C:\\Users\\admin\\AppData\\Local\\nvim-data\\mason\\packages\\lua-language-server\\bin\\lua-language-server.exe",
+      "args": ["--locale=zh-cn"],
+      "filetypes": ["lua"],
+    }
+  },
+  "suggest.completionItemKindLabels": {
+    "keyword": "",
+    "variable": "",
+    "value": "",
+    "operator": "Ψ",
+    "function": "ƒ",
+    "reference": "r",
+    "constant": "",
+    "method": "",
+    "struct": "פּ",
+    "class": "",
+    "interface": "",
+    "text": "",
+    "enum": "",
+    "enumMember": "",
+    "module": "",
+    "color": "",
+    "property": "",
+    "field": "料",
+    "unit": "",
+    "event": "鬒",
+    "file": "",
+    "folder": "",
+    "snippet": "",
+    "typeParameter": "",
+    "default": ""
+  },
+  "explorer.keyMappings.global":{
+    "i": "open:vsplit",
+
+    "gk": "expandablePrev",
+    "gj": "expandableNext",
+
+    "*": "toggleSelection",
+    "<tab>": "actionMenu",
+
+    "h": "collapse",
+    "l": ["expandable?", "expand", "open"],
+    "J": ["toggleSelection", "nodeNext"],
+    "K": ["toggleSelection", "nodePrev"],
+    "gl": "expandRecursive",
+    "gh": "collapseRecursive",
+    "<2-LeftMouse>": [
+      "expandable?",
+      ["expanded?", "collapse", "expand"],
+      "open"
+    ],
+    "o": ["expanded?", "collapse", "expand"],
+    "<cr>": ["expandable?", "cd", "open"],
+    "e": "open",
+    "s": "open:split",
+    "S": "open:split:plain",
+    "E": "open:vsplit",
+    "t": "open:tab",
+    "<bs>": "gotoParent",
+    "gp": "preview:labeling",
+
+    "y": "copyFilepath",
+    "Y": "copyFilename",
+    "c": "copyFile",
+    "x": "cutFile",
+    "p": "pasteFile",
+    "d": "delete",
+    "D": "deleteForever",
+
+    "a": "addFile",
+    "A": "addDirectory",
+    "r": "rename",
+
+    ".": "toggleHidden",
+    "R": "refresh",
+
+    "?": "help",
+    "q": "quit",
+    "<esc>": "esc",
+    "X": "systemExecute",
+    "gd": "listDrive",
+
+    "f": "search",
+    "F": "searchRecursive",
+
+    "gf": "gotoSource:file",
+    "gb": "gotoSource:buffer",
+
+    "[[": "sourcePrev",
+    "]]": "sourceNext",
+
+    "[d": "diagnosticPrev",
+    "]d": "diagnosticNext",
+
+    "[c": "gitPrev",
+    "]c": "gitNext",
+    "<<": "gitStage",
+    ">>": "gitUnstage"
+  },
+  "workspace.rootPatterns": [".git", "init.lua", "compile_commands.json", ".svn"],
+  //explorer
+  "explorer.root.strategies":[
+    "workspace",
+    "cwd",
+    "sourceBuffer",
+    "reveal",
+  ],
+  "explorer.root.customRules":{
+    "vcs":{
+      "patterns":[".git",".hg","compile_commands.json"]
+    },
+    "vcs-r":{
+      "patterns":[".git",".hg","compile_commands.json"],
+      "bottomUp":true
+    }
+  },
+  "explorer.icon.enableNerdfont": true,
+  "explorer.quitOnOpen":true,
+  "explorer.file.showHiddenFiles":false,
+  "explorer.git.enable": true,
+  //jedi
+  "jedi.enable": true,
+  "jedi.startupMessage":false,
+  "jedi.markupKindPreferred":"markdown",
+  "jedi.trace.server":"messages",
+  "jedi.jediSettings.autoImportModules":["numpy","matplotlib","cv2","os","sys"],
+  "jedi.jediSettings.debug": false,
+  //"jedi.executable.command":"C:\\Users\\admin\\AppData\\Local\\Programs\\Python\\Python313\\Scripts\\jedi-language-server.exe",
+  "jedi.executable.args": [],
+  "jedi.codeAction.nameExtractFunction": "jls_extract_def",
+  "jedi.codeAction.nameExtractVariable": "jls_extract_var",
+  "jedi.completion.disableSnippets": false,
+  "jedi.completion.resolveEagerly": false,
+  "jedi.completion.ignorePatterns": [],
+  "jedi.diagnostics.enable": true,
+  "jedi.diagnostics.didOpen": true,
+  "jedi.diagnostics.didChange": true,
+  "jedi.diagnostics.didSave": true,
+  "jedi.hover.enable": true,
+  "jedi.hover.disable.keyword.all": false,
+  "jedi.hover.disable.keyword.names": [],
+  "jedi.hover.disable.keyword.fullNames": [],
+  "jedi.workspace.extraPaths": [],
+  "jedi.workspace.symbols.maxSymbols": 20,
+  "jedi.workspace.symbols.ignoreFolders": [
+    ".git",
+    ".PCBFiles"
+  ],
+  "diagnostic-languageserver.filetypes": {
+    "python": "pylint"
+  },
+  "diagnostic-languageserver.linters": {
+    "pylint": {
+      "sourceName": "pylint",
+      "command": "pylint",
+      "debounce": 100,
+      "args": [
+        "--output-format",
+        "text",
+        "--score",
+        "no",
+        "--msg-template",
+        "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
+        "%file"
+      ],
+      "formatPattern": [
+        "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+        {
+          "line": 1,
+          "column": 2,
+          "endColumn": 2,
+          "security": 3,
+          "message": 4
+        }
+      ],
+      "rootPatterns": ["pyproject.toml", "setup.py", ".git"],
+      "securities": {
+        "informational": "hint",
+        "refactor": "info",
+        "convention": "info",
+        "warning": "warning",
+        "error": "error",
+        "fatal": "error"
+      },
+      "offsetColumn": 1,
+      "offsetColumnEnd": 1,
+      "formatLines": 1
+    }
+  },
+  //    "texlab.build.executable":"~/.config/nvim/mine/thesaurus/latexbuild.sh",
+  // "markdownlint.config":{
+  //     "line-length":false,
+  //     "first-line-heading":false,
+  //     "first-line-h1":false,
+  //     "hard_tab":false,
+  //     "line_length":false,
+  //     "indentation":false,
+  //     "ul-indent":false,
+  //     "list-indent":false
+  // },
+  // "browser.patterns": {
+  //     "javascript": [
+  //         "^\\s*\\/\\/",
+  //         "^\\s*\\/\\*",
+  //         "^\\s*\\*"
+  //     ]
+  // },
+  "snippets.ultisnips.pythonPrompt": false,
+  "translator.engines": [
+    "youdao",
+    "haici"
+  ],
+  "hover.floatConfig": {
+    "border": false,
+    "maxWidth": 0
+  }
+}
+
+
+

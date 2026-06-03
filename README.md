@@ -6,7 +6,7 @@ My own LazyVim configs
 
 # Keymaps
 
-* I never change the defualt **Leader** key as **\<Space\>**, I define my own leaderkey as **"**
+* I never change the defualt **Leader** key as **\<Space\>**, I define my own leaderkey as **;**
 
 ## My own key maps:
 ```lua
@@ -35,24 +35,16 @@ map("n", mymapleader .. "j", "<C-w>j", { desc = "Go to Lower Window", remap = tr
 map("n", mymapleader .. "k", "<C-w>k", { desc = "Go to Upper Window", remap = true })
 map("n", mymapleader .. "l", "<C-w>l", { desc = "Go to Right Window", remap = true })
 ```
-## LazyVim keymaps log
 
-| keymap | function | mark |
-|----|----|----|
-|gco|add a comment line unsed ||
-|gcO|add a comment line above ||
-|gcc|comment toggle||
-||||
-|\<S-h\>| move to left buffer ||
-|\<S-l\>| move to right buffer ||
-
-
+## disable LazyVim default keymaps
+- comment the `<C-k>` in `Lazyvim/lua/lazyvim/plugins/lsp/keymaps.lua`, desc is `Signature Help`
 
 # Plugins
 
 * a-vim.lua
 
   * switch c/c++ source/header
+  - remove `<Leader>ihn` `<Leader>is` `<Leader>ig` in a.vim
 
 * indentcomment.lua
 
@@ -60,7 +52,7 @@ map("n", mymapleader .. "l", "<C-w>l", { desc = "Go to Right Window", remap = tr
 
 * rainbow.lua
 
-  * a colorful bow
+  * a colorful bow, rainbow-delimiters.nvim
 
 * vim-multiple-cursor.lua
 
@@ -69,3 +61,10 @@ map("n", mymapleader .. "l", "<C-w>l", { desc = "Go to Right Window", remap = tr
 * vista.lua
 
   * a symbols display plugin, functions, variable, macros, class, enums...
+
+* coc.nvim
+  * never use lazyvim own complete function, use coc
+  * the plugins include: `coc-snippets, coc-links, coc-location, coc-symbols, coc-outline, coc-explorer, coc-translation, coc-diagnostics, coc-notifications`
+
+* lazygit.lua
+  * integrity lazygit function

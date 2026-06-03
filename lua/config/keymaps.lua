@@ -4,37 +4,6 @@
 local mymapleader = ";"
 local map = LazyVim.safe_keymap_set
 
--- my own map settings
-map({ "i", "v", "c" }, "jk", "<ESC>", { desc = "exit insert mode", remap = true })
-map("n", mymapleader .. "w", "<cmd>wa<cr>", { desc = "save all" })
-map("n", mymapleader .. "q", "<cmd>wq<cr>", { desc = "save quit" })
-map("n", mymapleader .. "<s-q>", "<cmd>q!<cr>", { desc = "Quit not save" })
-map("n", mymapleader .. mymapleader .. "n", "<cmd>set nu<cr><cmd>set rnu<cr>", { desc = "set rnu" })
-map("i", mymapleader .. "0", "<esc>0i", { desc = "return head in insert" })
-map("i", mymapleader .. "4", "<esc>A", { desc = "move to tail in insert" })
-map("n", mymapleader .. "e", "%", { desc = "move matchit" })
-map("n", mymapleader .. "b", "<cmd>Vista nvim_lsp<cr>", { desc = "Toggle vista sidebar" })
-map("n", mymapleader .. "ch", "<cmd>A<cr>", { desc = "switch source and header" })
-map("n", mymapleader .. "g", "<cmd>IH<cr>", { desc = "move matchit" })
-map("n", mymapleader .. "v", "<cmd>AV<cr>", { desc = "move matchit" })
--- map("n", "<leader>p", "<cmd>bprevious<cr>", { desc = "Prev Buffer" }) -- use '<S-h> and <S-l>'
--- map("n", "<leader>m", "<cmd>bnext<cr>", { desc = "Next Buffer" })
-
--- better up/down
-map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
-map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
-map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
-map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
-
-map("i", "<C-h>", "<Left>", { desc = "Go to Left Window", remap = true })
-map("i", "<C-j>", "<Down>", { desc = "Go to Lower Window", remap = true })
-map("i", "<C-k>", "<Up>", { desc = "Go to Upper Window", remap = true })
-map("i", "<C-l>", "<Right>", { desc = "Go to Right Window", remap = true })
-
-map("n", mymapleader .. "h", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", mymapleader .. "j", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", mymapleader .. "k", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", mymapleader .. "l", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
 -- Move to window using the <ctrl> hjkl keys
 -- map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
@@ -245,3 +214,40 @@ if vim.fn.has("nvim-0.11") == 0 then
     return vim.snippet.active({ direction = -1 }) and "<cmd>lua vim.snippet.jump(-1)<cr>" or "<S-Tab>"
   end, { expr = true, desc = "Jump Previous" })
 end
+
+---------------------------------- my own map settings ----------------------------------------
+map({ "i", "v", "c" }, "jk", "<ESC>", { desc = "exit insert mode", remap = true })
+map("n", mymapleader .. "w", "<cmd>wa<cr>", { desc = "save all" })
+map("n", mymapleader .. "q", "<cmd>wq<cr>", { desc = "save quit" })
+map("n", mymapleader .. "<s-q>", "<cmd>q!<cr>", { desc = "Quit not save" })
+map("n", mymapleader .. mymapleader .. "n", "<cmd>set nu<cr><cmd>set rnu<cr>", { desc = "set rnu" })
+map("i", mymapleader .. "0", "<esc>0i", { desc = "return head in insert" })
+map("i", mymapleader .. "4", "<esc>A", { desc = "move to tail in insert" })
+map("n", mymapleader .. "e", "%", { desc = "move matchit" })
+map("n", mymapleader .. "b", "<cmd>Vista coc<cr>", { desc = "Toggle vista sidebar" })
+map("n", mymapleader .. "ch", "<cmd>A<cr>", { desc = "switch source and header" })     -- from a.vim
+map("n", mymapleader .. "i", "<cmd>IH<cr>", { desc = "move matchit" })
+map("n", mymapleader .. "v", "<cmd>AV<cr>", { desc = "move matchit" })
+map("n", "Q", ":q!<cr>", { desc = "quit window unsaved"})
+-- map("n", "<leader>p", "<cmd>bprevious<cr>", { desc = "Prev Buffer" }) -- use '<S-h> and <S-l>'
+-- map("n", "<leader>m", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+
+-- better up/down
+map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+map({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+map({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+
+map("i", "<C-h>", "<Left>", { desc = "Go to Left Window", remap = true })
+map("i", "<C-j>", "<Down>", { desc = "Go to Lower Window", remap = true })
+map("i", "<C-k>", "<Up>", { desc = "Go to Upper Window", remap = true })
+map("i", "<C-l>", "<Right>", { desc = "Go to Right Window", remap = true })
+
+map("n", mymapleader .. "h", "<C-w>h", { desc = "Go to Left Window", remap = true })
+map("n", mymapleader .. "j", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+map("n", mymapleader .. "k", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+map("n", mymapleader .. "l", "<C-w>l", { desc = "Go to Right Window", remap = true })
+
+map("n", "<s-b>", "5b", {desc = "Fast Move B", remap = true})
+map("n", "<s-w>", "5w", {desc = "Fast Move W", remap = true})
+map("n", "<s-e>", "5e", {desc = "Fast Move E", remap = true})

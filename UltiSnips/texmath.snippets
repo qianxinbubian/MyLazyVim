@@ -1,0 +1,109 @@
+priority -50
+
+##############
+# MATH STUFF #
+##############
+
+snippet ml "math in line" 
+$ ${1:VISUAL} $ ${0} 
+endsnippet
+
+snippet in "integrated" 
+\int_{${1:-\infty}}^{${2:+\infty}} ${3:f(x)}${0:dx}
+endsnippet
+
+snippet iin "integrated" 
+\iint_{${1:-\infty}}^{${2:+\infty}} ${3:f(x)}${0:dx}
+endsnippet
+
+snippet iiin "integrated" 
+\iiint_{${1:-\infty}}^{${2:+\infty}} ${3:f(x)}${0:dx}
+endsnippet
+
+snippet iiiin "integrated" 
+\iiiint_{${1:-\infty}}^{${2:+\infty}} ${3:f(x)}${0:dx}
+endsnippet
+
+snippet lim "limit"
+\lim\limits_{${1:x}\to${2:0}} ${0}
+endsnippet
+
+snippet ora "overrightarrow"
+\overrightarrow{${1}}${0}
+endsnippet
+
+snippet oline "overline"
+\overline{ ${1} }${0}
+endsnippet
+
+snippet uline "underline"
+\underline{ ${1} }${0}
+endsnippet
+
+snippet obra "overbrace"
+\overbrace{ ${1} }^{${2}}${0}
+endsnippet
+
+snippet ubra "underbrace"
+\underbrace{ ${1} }_{${2}}${0}
+endsnippet
+
+snippet fr "frac" 
+\frac{${1:1}}{${2}}\quad${0}
+endsnippet
+
+snippet pr "prod" 
+\prod_{${1:i=1}}^{${2:n}}\quad${0}
+endsnippet
+
+snippet sum "sum" 
+\sum_{${1:i=1}}^{${2:n}}\quad${0}
+endsnippet
+
+snippet eqnn "Equation without a number" b
+\begin{equation*}
+	${0:${VISUAL}}
+\end{equation*}
+endsnippet
+
+snippet al "Align" b
+\begin{align}
+	${0:${VISUAL}}
+\end{align}
+endsnippet
+
+snippet alnn "Align without a number" b
+\begin{align*}
+	${0:${VISUAL}}
+\end{align*}
+endsnippet
+
+snippet eqa "Equation array" b
+\begin{eqnarray}
+	${1:${VISUAL}} & ${2:${VISUAL}} & ${0:${VISUAL}}
+\end{eqnarray}
+endsnippet
+
+snippet eqann "Equation array without a number" b
+\begin{eqnarray*}
+	${1:${VISUAL}} & ${2:${VISUAL}} & ${0:${VISUAL}}
+\end{eqnarray*}
+endsnippet
+
+#################
+# PHYSICS STUFF #
+#################
+
+snippet dv "Derivative" w
+\dv[${1:${VISUAL}}]{${2}}{${3}}
+endsnippet
+
+snippet pdv "Partial Derivative" w
+\pdv[${1:${VISUAL}}]{${2}}{${3}}
+endsnippet
+
+snippet SI "SI-Unit" w
+\SI{${1:${VISUAL}}}{${2}}
+endsnippet
+
+# vim:ft=snippets:
